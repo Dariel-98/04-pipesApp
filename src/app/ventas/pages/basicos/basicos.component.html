@@ -20,3 +20,34 @@
     </p-card>
   </div>
 </div>
+
+<div class="text-layout">
+  <h1>Date | Fecha | Pipe</h1>
+  <p>Pipe para mostrar las fechas</p>
+</div>
+
+<div class="flex">
+  <div class="flex-1 p4 mr-3">
+    <p-card>
+      <ul>
+        <li>fecha</li>
+        <li>fecha | date</li>
+        <li>fecha | date : "short"</li>
+        <li>fecha | date : "long"</li>
+        <li>fecha | date : "custom"</li>
+      </ul>
+    </p-card>
+  </div>
+
+  <div class="flex-1 p4 mr-3">
+    <p-card>
+      <ul>
+        <li>{{ fecha }}</li>
+        <li>{{ fecha | date }}</li>
+        <li>{{ fecha | date : "short" }}</li>
+        <li>{{ fecha | date : "long" }}</li>
+        <li>{{ fecha | date : "MMMM dd, yyyy 'at' hh:mm a" }}</li>
+      </ul>
+    </p-card>
+  </div>
+</div>
