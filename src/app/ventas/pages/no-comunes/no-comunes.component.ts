@@ -3,9 +3,13 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-no-comunes',
   templateUrl: './no-comunes.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class NoComunesComponent {
-
+  nombre: string = 'Dariel';
+  genero: string = 'masculino';
+  invitacionMapa = {
+    masculino: 'invitarlo',
+    femenino: 'invitarla',
+  };
 }
