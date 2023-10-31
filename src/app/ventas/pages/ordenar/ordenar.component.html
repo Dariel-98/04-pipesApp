@@ -1,10 +1,55 @@
 <div class="text-layout">
   <h1>Pipes personalizados</h1>
   <p>Pipes creados por el {{ "usuario" | mayusculas : valor }}</p>
+</div>
 
-  <p-button
-    label="Toggle Mayusculas"
-    [rounded]="true"
-    (onClick)="enMayusculas()"
-  ></p-button>
+<p-toolbar>
+  <div class="p-toolbar-group-start"></div>
+  <div class="p-toolbar-group-end">
+    <p-button
+      label="Toggle Mayusculas"
+      (onClick)="enMayusculas()"
+      class="mr-1"
+      severity="info"
+    ></p-button>
+
+    <button pButton icon="pi pi-sort" label="Por nombre" class="mr-1"></button>
+
+    <button
+      pButton
+      icon="pi pi-sort"
+      label="Valores"
+      class="mr-1 p-button-success"
+    ></button>
+
+    <button
+      pButton
+      icon="pi pi-sort"
+      label="Por color"
+      class="mr-1 p-button-help"
+    ></button>
+  </div>
+</p-toolbar>
+
+<div class="grid">
+  <div class="col mt-2">
+    <p-table [value]="[]" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Code</th>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Quantity</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-product>
+        <tr>
+          <td>{{ product.code }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.category }}</td>
+          <td>{{ product.quantity }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
 </div>
